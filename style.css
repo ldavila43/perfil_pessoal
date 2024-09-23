@@ -1,0 +1,215 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+p{
+    text-align: center;
+}
+
+img {
+    border-radius: 50px;
+    padding-bottom: 20px;
+}
+
+header {
+    background-color: blue;
+    grid-area: h;
+    padding: 10px 0;
+}
+
+
+header nav {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .menu {
+    list-style-type: none;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    height: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    list-style-type: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    height: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 20px; /* Corrigido */
+}
+
+
+.menu a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    transition: transform 0.2s ease, color 0.3s ease;
+    display:inline-block;
+}
+
+.menu a:hover {
+    color: darkgray;
+    transform: scale(1.2); /* Um exemplo de efeito */
+}
+
+li {
+    list-style-position:inside;
+}
+
+body {
+    background-color: blue;
+    display: grid;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    grid-template-areas:
+        "a h h h"
+        "a c c c"
+        "a f f f";
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+    grid-template-rows: minmax(30px, 70px) 1fr minmax(30px, 50px); /* 3 linhas */
+    overflow-y: hidden;
+    max-height: 100vh;
+}
+
+main {
+    border-radius: 25px;
+    background-color: lightblue;
+    grid-area: c;
+    display: flex;
+    flex-direction:column;
+    overflow-y: hidden;
+}
+
+main h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+main h2 {
+    padding: 4px;
+}
+
+main h3 {
+    padding: 4px;
+}
+
+main ul {
+    padding-bottom: 5px;
+}
+
+main p {
+    padding-bottom: 4px;
+}
+
+
+aside{
+    grid-area: a;
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+}
+
+footer {
+    padding: 10px;
+    display: flex;
+    grid-area: f;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    display:flex;
+    color: white;
+    width: 100%;
+    padding: 0;
+    margin:0;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+footer li {
+    flex: 1;
+    text-align: center;
+}
+
+footer li:first-child {
+    text-align: left;
+}
+
+footer li>:nth-child(2) {
+    text-align: center;
+}
+
+footer li:last-child {
+    text-align: right;
+}
+
+footer a {
+    color:white;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+    display:inline-block;
+}
+
+footer a:hover {
+    color: rgb(251, 255, 0);
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 600px) {
+    aside {
+        display: none;
+    }
+
+    nav menu {
+        width: 100%;
+    }
+
+    body {
+        grid-template-areas: 
+            "a h h h"
+            "a c c c"
+            "a f f f";
+    }
+
+    .news {
+        display: none;
+    }
+
+    #photo-whoami {
+        width: 150px;
+        float: left; 
+        padding: 10px;
+    }
+}
+
+@media screen and not (max-width: 600px) {
+    #photo-whoami {
+        display: none;
+    }
+}
